@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es5",
+    "outDir": "./Scripts",
+    "rootDir": "./ClientApp"
+  },
+  "exclude": [
+    "node_modules",
+    "Scripts"
+  ],
+  "compileOnSave": true
+}

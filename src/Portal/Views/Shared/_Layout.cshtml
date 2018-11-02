@@ -1,0 +1,25 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" name="description" content="The description of my page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="@Url.Content("~/")"/>
+    <link rel="shortcut icon" href="~/favicon.ico" />
+
+    <title>@ViewBag.Title - Система управления физическим хранилищем</title>
+    @Styles.Render("~/styles/vendor/bootstrap")
+    @Scripts.Render("~/scripts/vendor/jquery")
+    @Scripts.Render("~/scripts/vendor/knockout")
+    @Scripts.Render("~/scripts/vendor/popper.js")
+    @Scripts.Render("~/scripts/vendor/bootstrap")
+    @RenderSection("scripts", false)
+</head>
+<body>
+    <div> 
+        @RenderBody()
+    </div>
+</body>
+</html>

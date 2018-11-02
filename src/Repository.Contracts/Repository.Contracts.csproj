@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+        <AssemblyName>Correct.Storage.Repository.Contracts</AssemblyName>
+        <RootNamespace>Correct.Storage.Repository</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="5.1.0" />
+    </ItemGroup>
+
+</Project>
