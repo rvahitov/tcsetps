@@ -1,15 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Correct.Storage.Migrations</RootNamespace>
     <AssemblyName>Correct.Storage.Migrations</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FluentMigrator" Version="3.1.3" />
-  </ItemGroup>
-
   <ItemGroup>
     <None Update="migrate.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -18,5 +13,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

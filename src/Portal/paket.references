@@ -1,0 +1,11 @@
+Autofac
+Autofac.Mvc5
+MediatR
+Microsoft.AspNet.Mvc
+Microsoft.AspNet.Razor
+Microsoft.AspNet.Web.Optimization
+Microsoft.AspNet.WebPages
+Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+Microsoft.Web.Infrastructure
+RestSharp
+RestSharp.Newtonsoft.Json
