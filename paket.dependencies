@@ -22,6 +22,8 @@ nuget Microsoft.AspNet.WebApi.Client 5.2.6
 nuget Microsoft.AspNet.WebApi.Core 5.2.6
 nuget Microsoft.AspNet.WebApi.WebHost 5.2.6
 nuget Microsoft.AspNet.WebPages 3.2.6
+nuget Microsoft.AspNetCore.App
+nuget Microsoft.AspNetCore.Razor.Design 2.1.2
 nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform 2.0.1
 nuget Microsoft.EntityFrameworkCore.Relational 2.1.4
 nuget Microsoft.EntityFrameworkCore.SqlServer 2.1.4
