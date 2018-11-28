@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Correct.Storage.DomainStorage
 {
     public class BoxStorage : DomainEventSubscriber,
-        ISubscribeTo<BoxAggregate, BoxId, BoxCreatedEvent>
+        ISubscribeToAsync<BoxAggregate, BoxId, BoxCreatedEvent>
     {
         private readonly DbContextOptions _dbContextOptions;
 
@@ -19,7 +19,7 @@ namespace Correct.Storage.DomainStorage
             _dbContextOptions = dbContextOptions;
         }
 
-        public async Task Handle(IDomainEvent<BoxAggregate, BoxId, BoxCreatedEvent> domainEvent)
+        public async Task HandleAsync(IDomainEvent<BoxAggregate, BoxId, BoxCreatedEvent> domainEvent)
         {
             var entity = new BoxEntity
             {

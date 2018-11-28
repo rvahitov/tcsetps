@@ -6,10 +6,10 @@
         <AssemblyName>Correct.Storage.Domain</AssemblyName>
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="Akkatecture" Version="0.1.5" />
+      <PackageReference Include="Akkatecture" Version="0.3.0" />
       <PackageReference Include="Autofac" Version="4.8.1" />
       <PackageReference Include="Chessie" Version="0.6.0" />
-      <PackageReference Include="FSharp.Core" Version="4.5.2" />
+      <PackageReference Include="FSharp.Core" Version="4.5.4" />
       <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
       <PackageReference Include="MediatR" Version="5.1.0" />
       <PackageReference Include="Serilog" Version="2.7.1" />

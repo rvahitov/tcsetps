@@ -9,6 +9,7 @@ using Correct.Storage.Domain.Models.BoxModel.Specifications;
 using Correct.Storage.Domain.Models.BoxModel.ValueObjects;
 using JetBrains.Annotations;
 using Serilog;
+using Address = Correct.Storage.Domain.Models.BoxModel.ValueObjects.Address;
 
 namespace Correct.Storage.Domain.Models.BoxModel
 {
@@ -22,6 +23,24 @@ namespace Correct.Storage.Domain.Models.BoxModel
         {
             _logger = Serilog.Log.ForContext<BoxAggregate>();
             Command<CreateBoxCommand>(CreateBox);
+            Command<ChangeAddressCommand>(ChangeAddress);
+        }
+
+        private bool ChangeAddress(ChangeAddressCommand cmd)
+        {
+            _logger.LogHandlingCommand(cmd);
+            var spec = new AggregateIsNewSpecification()
+                .Not().And(new ChangeAddressSpecification(cmd.NewAddress));
+
+            var specResult = spec.AsChessieResult(this);
+            if (specResult.IsOk)
+            {
+                Emit(new AddressChangedEvent(cmd.NewAddress));
+            }
+
+            Sender.Tell(specResult);
+            _logger.LogHandlingCommandResult(cmd, specResult);
+            return true;
         }
 
         private bool CreateBox(CreateBoxCommand cmd)
@@ -42,6 +61,7 @@ namespace Correct.Storage.Domain.Models.BoxModel
         IEmit<BoxCreatedEvent>
     {
         public Barcode Barcode { get; private set; }
+        public Address Address { get; private set; }
 
         public void Apply(BoxCreatedEvent aggregateEvent)
         {
