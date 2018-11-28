@@ -1,5 +1,5 @@
-source https://www.nuget.org/api/v2
-
+storage none
+source https://api.nuget.org/v3/index.json
 nuget Akka 1.3.9
 nuget Akka.Logger.Serilog 1.3.9
 nuget Akka.Persistence.SqlServer 1.3.7
@@ -34,3 +34,10 @@ nuget Serilog.Settings.AppSettings 2.2.2
 nuget Serilog.Sinks.RollingFileAlternate 2.0.9
 nuget SerilogWeb.Classic.WebApi 3.0.1
 nuget System.Collections.Immutable 1.5.0
+// [ FAKE GROUP ]
+group Build
+    storage none
+    source https://api.nuget.org/v3/index.json
+    nuget Fake.DotNet.Cli
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
